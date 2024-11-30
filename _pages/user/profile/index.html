@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" id="rootElement" >
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ちぃのプロフィール：SSブログ</title>
+<meta name="Slurp" content="NOYDIR" />
+<meta name="keywords" content="プロフィール,ブログ,写真,動画,音楽,コミュニティ" />
+<meta name="description" content="ちぃのプロフィール、ブログ、写真、動画、音楽などを公開中" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="https://blog.ss-blog.jp/_common/css/common.css" type="text/css" />
+<link rel="stylesheet" href="https://blog.ss-blog.jp/_common/css/users.css" type="text/css" />
+<link rel="stylesheet" href="https://blog.ss-blog.jp/_common/css/profskin1.css" type="text/css" />
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/global.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/myblog_cms.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/popup.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_tag/js/tag.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/client_info.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/event.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/text_range.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/layer.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/word_processor.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/yahoo/yahoo-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/event/event-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/dom/dom-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/element/element-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/animation/animation-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/container/container-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/connection/connection-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/tabview/tabview-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/menu/menu-min.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/seesaa.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/JSON.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/Cookiejar.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/panel.js"></script>
+<script type="text/javascript" src="https://blog.ss-blog.jp/_js/yui/sonet.js"></script>
+<link rel="stylesheet" type="text/css" href="https://blog.ss-blog.jp/_js/yui/container/assets/container.css" />
+<link rel="stylesheet" type="text/css" href="https://blog.ss-blog.jp/_js/yui/menu/assets/menu.css" />
+<link rel="stylesheet" type="text/css" href="https://blog.ss-blog.jp/_common/css/myblog_overyui.css" />
+<link rel="shortcut icon" href="https://blog.ss-blog.jp/_common/favicon.ico" />
+
+<style type="text/css">.itemWrap a:link { color:#0887b6; text-decoration:none; }
+.itemWrap a:visited { color:#0887b6; text-decoration:none; }
+.itemWrap a:hover { color:#0887b6; text-decoration:underline; }
+.itemWrap a:active { color:#0887b6; text-decoration:none; }
+
+.itemWrap { color:#333333; }
+</style>
+<script type="text/javascript">
+<!--
+if (navigator.userAgent.indexOf('Win') >= 0) document.write('<style type="text/css">.login-status { font-size:11px;}</style>');
+//-->
+</script>
+
+</head>
+<body>
+
+<!-- SS Header -->
+<div id="sonetHeader" class="clearfix">
+	<div class="headerWrap">
+		<span id="blogLabel"><a href="https://blog.ss-blog.jp"><img src="https://blog.ss-blog.jp/_common/img/header/h1_blog.gif" alt="ブログ" /></a></span>
+		<span id="myblog-header-right-no-login"></span>
+
+		<span style="display: none;" id="myblog-header-left-login">
+		<ul class="headerMenu">
+			<li><a href="../../../index.html">#myblog-nickname</a>&nbsp;さん</li>
+			<li><a rel="nofollow" href="https://blog.ss-blog.jp/MyPage/">管理ページ</a></li>
+			<li><a href="../../../index.html">自分のブログ</a></li>
+			<li><a rel="nofollow" href="https://blog.ss-blog.jp/_pages/logout?t=t&amp;use_http_referer=1&amp;u=http%3A%2F%2Fgoodbye%2Djonny%2Eblog%2Eso%2Dnet%2Ene%2Ejp%2F">ログアウト</a></li>
+		</ul>
+		</span>
+
+		<span id="myblog-display-area-login"></span>
+		<span style="display: block;" id="myblog-display-area-no-login">
+		<ul class="headerMenu">
+			<li><a href="https://sso.ss-blog.jp/account/register">新規登録</a></li>
+			<li><a href="https://sso.ss-blog.jp/account/login">ログイン</a></li>
+			<li><a href="https://blog.ss-blog.jp/_about/">はじめてガイド</a></li>
+		</ul>
+		</span>
+
+	</div>
+</div>
+<!--/ SS Header -->
+
+<div style="margin-bottom:10px;"></div>
+<a name="top" id="top"></a>
+<script id="myblog-js" type="text/javascript" language="JavaScript" src="https://blog.ss-blog.jp/_js/myblog.js?page_name=index&amp;blog_name=umekichi-the-cat"></script>
+<div id="profContainer" class="clearfix">
+
+<div class="profHeader clearfix">
+	<h1>ちぃのプロフィール</h1>
+	<ul class="naviList">
+		<li class="naviFirstLink"><a href="../../../index.html">ブログ</a></li>
+		<li><a href="index.html">プロフィール</a></li>
+			</ul>
+</div>
+
+<!-- Profile Content -->
+<div class="contentArea">
+
+<div class="leftArea">
+
+	<div id="usersBlog" class="itemWrap clearfix">
+		<div class="userImg">
+		<img src="https://blog.ss-blog.jp/_profile/_0ce/umekichi-the-cat/_m_umekichi-the-cat.png?2024-11-3017:22:33" />
+		</div>
+		<div class="userLink">
+			<ul>
+				<li class="titleList">▼ブログ</li>
+				<li class="linkToBlog"><a href="../../../index.html">梅吉日記ーあとがきー</a></li>
+				<li class="titleList">▼テーマ</li>
+				<li class="linkToTheme"><a href="https://blog.ss-blog.jp/_contents/blog_theme/0024/">ペット</a> </li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="profData" class="itemWrap clearfix">
+		<h2>自己紹介</h2>
+        <dl>
+        	<dt>ニックネーム：</dt>
+            <dd>ちぃ</dd>
+<dt>性別：</dt>
+<dd>女性</dd>
+        </dl>
+	</div>
+
+	<div id="favoriteData" class="itemWrap clearfix">
+	  <h2>好きなモノ</h2>
+          <dl>
+                      </dl>
+	</div>
+</div>
+
+
+<div class="rightArea">
+  <div id="freeArea" class="itemWrap clearfix">
+                                    <a href="../../../_images/blog/_0ce/umekichi-the-cat/DSC05557.jpg.html" target="_blank"><img src="../../../_images/blog/_0ce/umekichi-the-cat/m_DSC05557.jpg.html" width="350" height="232" border="0" align="" alt="DSC05557.jpg" /></a><br /><br />2015年７月<br />4ヶ月で我が家にやってきた保護猫出身の梅吉。<br />男の子。
+                          </div>
+	<div id="articleData" class="itemWrap clearfix">
+    	<a href="../../../index.html" class="more">もっと見る</a>
+		<h2>ブログ記事</h2>
+        <ul>
+        	<li><a href="../../../2024-11-24.html">明神山登山とブログ移転のこと</a><span class="dateR">[24/11/28 00:00]</span></li>        	<li><a href="../../../2024-11-14.html">第76回正倉院展</a><span class="dateR">[24/11/14 00:00]</span></li>        	<li><a href="../../../2024-10-30.html">にこみまくりでつながる</a><span class="dateR">[24/10/31 00:00]</span></li>        	<li><a href="../../../2024-08-01.html">近所のあれこれと夏休みのお知らせ</a><span class="dateR">[24/08/01 00:00]</span></li>        	<li><a href="../../../2024-07-25.html">特別展「ネコ」に行ってきた</a><span class="dateR">[24/07/25 00:00]</span></li>        </ul>
+	</div>
+</div>
+<!-- Profile Content -->
+
+<div class="clr"></div>
+
+</div>
+<!-- End of Content -->
+
+<div id="footer">
+<p class="copyright">Copyright(c) FAN Communications, Inc. All Rights Reserved</p>
+</div>
+
+</body>
+</html>
